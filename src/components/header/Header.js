@@ -11,6 +11,8 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem } from 'reactstrap';
+  
+import { Link } from 'react-router-dom'
 
 export default class Header extends Component {
   
@@ -27,18 +29,18 @@ export default class Header extends Component {
         return (
           <div>
             <Navbar color="success" light expand="md">
-              <NavbarBrand href="/">reactstrap</NavbarBrand>
+              <NavbarBrand>PERMATA BANK</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink href="/components/">Login</NavLink>
+                    <NavLink><Link to="/">Login</Link></NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">Info Kurs</NavLink>
+                    <NavLink><Link to="/infokurs">Info Kurs</Link></NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="/components/">Beranda</NavLink>
+                    <NavLink><Link to="/beranda">Beranda</Link></NavLink>
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle nav caret>
@@ -46,14 +48,11 @@ export default class Header extends Component {
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>
-                        Option 1
-                      </DropdownItem>
-                      <DropdownItem>
-                        Option 2
+                        English
                       </DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem>
-                        Reset
+                        Indonesia
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
