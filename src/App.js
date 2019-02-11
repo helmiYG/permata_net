@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Login from './containers/Login'
 import InfoKurs from './containers/InfoKurs'
@@ -11,7 +11,6 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-     <BrowserRouter>
       <Layout>
         <Header />
         <Switch>
@@ -20,7 +19,6 @@ class App extends Component {
           <Route path="/beranda" component={Beranda} />
         </Switch>
       </Layout>
-     </BrowserRouter>
     );
   }
 }
