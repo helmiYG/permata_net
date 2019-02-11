@@ -1,0 +1,3 @@
+export {
+    changeTitle
+} from './head'
