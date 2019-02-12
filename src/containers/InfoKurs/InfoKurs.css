@@ -46,10 +46,20 @@ h3.style {
 .bg-green {
     background: #00a651;
     padding-top: 50px; 
-    border: none;
 }
 
 .bg-blue-grey {
     background: #78909c;
-    border: none;
+}
+
+.imgTitle {
+    color: #fff;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px rgba(0,0,0,0.4);
+    text-align: center;   
+    /* padding-top: 50px; */
+    /* position: absolute; */
+    border-radius: 10px;
 }
