@@ -5,7 +5,7 @@ import Login from './containers/Login/Login'
 import InfoKurs from './containers/InfoKurs'
 import Header from './components/header/Header'
 import Layout from './components/hoc/layout/layout'
-import Beranda from './containers/Beranda'
+import Beranda from './containers//Beranda/Beranda'
 import Footer from './components/footer/footer'
 import Test from './containers/TestTranslate/TestTranslate'
 import './App.css';
