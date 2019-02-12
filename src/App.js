@@ -6,6 +6,7 @@ import InfoKurs from './containers/InfoKurs'
 import Header from './components/header/Header'
 import Layout from './components/hoc/layout/layout'
 import Beranda from './containers/Beranda'
+import Footer from './components/footer/footer'
 import './App.css';
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route path="/infokurs" component={InfoKurs} />
           <Route path="/beranda" component={Beranda} />
         </Switch>
+        <Footer />
       </Layout>
     );
   }

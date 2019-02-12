@@ -1,0 +1,17 @@
+.footer {
+    padding: 50px;
+    font-size: smaller;
+    color: #647986;
+    position: absolute;
+    height: 200px;
+    bottom: 0;
+    width: 100%;
+    background: #29353B;
+}
+
+.nortonImage {
+    float: right;
+    height: 30px;
+    width: 50px;
+}
+
