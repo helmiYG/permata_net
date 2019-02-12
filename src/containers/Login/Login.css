@@ -1,0 +1,49 @@
+.warning {
+   padding: 50px;
+   text-align: center;
+   border-bottom: solid 2px grey;
+}
+
+.text-adsense {
+    text-align: start;
+    padding: 100px 100px 100px 50px;
+    color: rgb(85, 90, 90);
+}
+
+Button {
+    margin-right: 10px;
+}
+.text-adsense > p {
+    font-size: smaller;
+}
+ 
+h6, span {
+    font-weight: bold;
+}
+
+.warning > p {
+    font-size: smaller;
+    color: rgb(85, 90, 90);
+}
+
+.adsense {
+    padding: 50px 50px 0px 50px;
+}
+
+#hashtag {
+    color: #20C06A
+}
+
+.menu-adsense {
+    padding-top: 30px;
+}
+
+.menu-adsense > div {
+    color: #20C06A;
+}
+
+.text-menu {
+    text-decoration: none;
+    color: #20C06A
+}
+

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom";
 
-import Login from './containers/Login'
+import Login from './containers/Login/Login'
 import InfoKurs from './containers/InfoKurs'
 import Header from './components/header/Header'
 import Layout from './components/hoc/layout/layout'
