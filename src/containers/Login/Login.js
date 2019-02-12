@@ -5,6 +5,7 @@ import './Login.css'
 import Carousel from '../../components/ui/carousel/loginCarousel'
 import Button from '../../components/button/Button'
 import * as action from '../../store/action/index'
+import FormLogin from '../../components/formLogin/formLogin'
 
 class Login extends Component {
   componentDidMount() {
@@ -15,6 +16,7 @@ class Login extends Component {
     return (
       <div className="login">
         <Carousel />
+        <FormLogin />
         <div className="warning">
           <h6>HATI-HATI, TELITI & KONFIRMASI</h6>
           <p>Jaga Kerahasiaan User ID, Password, PIN/TIN, Alamat e-mail & Token Anda <br />
@@ -38,6 +40,9 @@ class Login extends Component {
             <div><a className="text-menu" href="#index">Buka Rekening</a></div><hr />
             <div><a className="text-menu" href="#index">Website Permata</a></div><hr />
           </div>
+        </div>
+        <div id="moreInfo">
+          <p>Untuk informasi lebih lanjut hubungi PermataTel 1500111</p>
         </div>
       </div>
     )
