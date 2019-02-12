@@ -5,7 +5,7 @@ import Login from './containers/Login'
 import InfoKurs from './containers/InfoKurs'
 import Header from './components/header/Header'
 import Layout from './components/hoc/layout/layout'
-import Beranda from './containers/Beranda'
+import Beranda from './containers/Beranda/Beranda'
 import './App.css';
 
 class App extends Component {
