@@ -15,3 +15,16 @@
     width: 50px;
 }
 
+#moreInfo {
+    width: 100%;
+    padding: 20px;
+    background: #E8EAEE;
+    height: 50px;
+    text-align: center;
+    color: #758E9C;
+}
+
+#moreInfo > p {
+    font-size: smaller;
+}
+

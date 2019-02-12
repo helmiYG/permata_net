@@ -41,9 +41,6 @@ class Login extends Component {
             <div><a className="text-menu" href="#index">Website Permata</a></div><hr />
           </div>
         </div>
-        <div id="moreInfo">
-          <p>Untuk informasi lebih lanjut hubungi PermataTel 1500111</p>
-        </div>
       </div>
     )
   }

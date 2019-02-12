@@ -6,6 +6,10 @@ import NortonImage from '../../asset/images/norton.png';
 export default class footer extends Component {
   render() {
     return (
+        <div>
+        <div id="moreInfo">
+          <p>Untuk informasi lebih lanjut hubungi PermataTel 1500111</p>
+        </div>
         <div className='footer'>
             <div className='row'>
                 <div className='col-md-6'>
@@ -16,6 +20,7 @@ export default class footer extends Component {
                     <img src={NortonImage} className="nortonImage" alt="background" />
                 </div>
             </div>
+        </div>
         </div>
     )
   }
