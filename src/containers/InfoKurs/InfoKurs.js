@@ -8,23 +8,26 @@ class InfoKurs extends Component {
   render() {
     return (
       <div>
-        <Image image={BannerInfokurs} />
+          <Image image={BannerInfokurs}/>
+          {/* <div className="imgTitle">
+            <h2> Informasi Kurs Valuta Asing</h2>
+          </div> */}
         <div className="heading">
           <div className="container">
             <div className="row col-lg-10">
-              <Link to="login">Beranda</Link>
+              <Link to="/">Beranda</Link>
             </div>
           </div>
         </div>
         <div class="container">
-          <div class="row col-lg-10" >
-            <h4>Infomasi Kurs</h4>
+          <div class="row col-lg-10 " >
+            <h4>Info Kurs</h4>
             <table class="table table-bordered">
               <thead>
                 <tr>
                   <th className="bg-green" rowspan="2">Mata Uang</th>
                   <th className="bg-blue-grey" colspan="2">Bank Note</th>
-                  <th className="bg-blue-grey"colspan="2">TT(Terhadap Rp)</th>
+                  <th className="bg-blue-grey" colspan="2">TT(Terhadap Rp)</th>
                 </tr>
                 <tr>
                   <th className="bg-blue-grey">Beli</th>
@@ -74,7 +77,7 @@ class InfoKurs extends Component {
           </div>
         </div>
 
-        <div className="heading box">
+        <div className="box">
           <div className="container">
             <h3 className="style" >Ketentuan</h3>
             <p>
