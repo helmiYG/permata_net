@@ -12,17 +12,13 @@ class Login extends Component {
       let page = this.props.match.path
       this.props.changeTitle(page)
   }
-
-  action = () => {
-    console.log('sadsdsds');
-  }
+  
   render() {
     return (
       <div className="login">
         {/* <Carousel /> */}
         <FormLogin />
         <ContentLogin />
-        <button onClick={this.action}>action</button>
       </div>
     )
   }

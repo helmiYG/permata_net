@@ -27,10 +27,6 @@ class Header extends Component {
       }
 
       actionLanguage = (lang) => {
-        console.log(lang);
-        // const { i18n } = this.props;
-        // const { value } = lang;
-        // i18n.changeLanguage(value);
         this.props.i18n.changeLanguage(lang);
       }
 
