@@ -5,6 +5,7 @@ import {
     NavbarToggler,
     NavbarBrand,
     Nav,
+    NavLink,
     NavItem,
     UncontrolledDropdown,
     DropdownToggle,
@@ -40,23 +41,23 @@ class Header extends Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <Link to="/">{t('Navbar.Beranda')}</Link>
+                    <NavLink><Link className="tag-navbar" to="/">{t('Navbar.Beranda')}</Link></NavLink>
                   </NavItem>
                   <NavItem>
-                    <Link to="/">{t('Navbar.Limit_Transaksi')}</Link>
+                    <NavLink><Link className="tag-navbar" to="#">{t('Navbar.Limit_Transaksi')}</Link></NavLink>
                   </NavItem>
                   <NavItem>
-                    <Link to="/infokurs">{t('Navbar.Info_Kurs')}</Link>
+                    <NavLink><Link className="tag-navbar" to="/infokurs">{t('Navbar.Info_Kurs')}</Link></NavLink>
                   </NavItem>
                   <NavItem>
-                    <Link to="/infokurs">{t('Navbar.Hubungi_Kami')}</Link>
+                    <NavLink><Link className="tag-navbar" to="#">{t('Navbar.Hubungi_Kami')}</Link></NavLink>
                   </NavItem>
                   <NavItem>
-                    <Link to="/infokurs">{t('Navbar.Butuh_Bantuan')}</Link>
+                    <NavLink><Link className="tag-navbar" to="#">{t('Navbar.Butuh_Bantuan')}</Link></NavLink>
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                      Bahasa
+                    <DropdownToggle className="tag-navbar" nav caret>
+                      BAHASA
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem onClick={() => this.actionLanguage('id')}>

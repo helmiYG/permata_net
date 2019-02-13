@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import './Login.css'
-// import Carousel from '../../components/ui/carousel/loginCarousel'
+import Carousel from '../../components/ui/carousel/loginCarousel'
 import * as action from '../../store/action/index'
 import FormLogin from '../../components/formLogin/formLogin'
 import ContentLogin from '../../components/content_login/content_login'
@@ -16,7 +16,7 @@ class Login extends Component {
   render() {
     return (
       <div className="login">
-        {/* <Carousel /> */}
+        <Carousel />
         <FormLogin />
         <ContentLogin />
       </div>

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Button from '../button/Button'
 import { withTranslation } from 'react-i18next';
 
+import './content_login.css'
+
 class Content_Login extends Component {
 
   render() {

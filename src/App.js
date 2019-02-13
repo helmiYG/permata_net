@@ -10,7 +10,6 @@ import Header from './components/header/Header'
 import Layout from './components/hoc/layout/layout'
 import Beranda from './containers//Beranda/Beranda'
 import Footer from './components/footer/footer'
-import Test from './containers/TestTranslate/TestTranslate'
 import './App.css';
 
 i18next.init(i18nextConfig);
@@ -24,12 +23,13 @@ class App extends Component {
       <I18nextProvider i18n={i18next}>
         <Layout>
           <Header />
-          <Switch>
-            <Route path="/" exact component={Login} />
-            <Route path="/infokurs" component={InfoKurs} />
-            <Route path="/beranda" component={Beranda} />
-            <Route path="/test" component={Test} />
-          </Switch>
+          <div className="set-bellow-navbar">
+            <Switch>
+              <Route path="/" exact component={Login} />
+              <Route path="/infokurs" component={InfoKurs} />
+              <Route path="/beranda" component={Beranda} />
+            </Switch>
+          </div>
           <Footer />
         </Layout>
       </I18nextProvider>
