@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withTranslation } from "react-i18next";
+import { withTranslation } from 'react-i18next';
 import Select from "react-select";
 import { options } from "../../config/options";
 
@@ -29,12 +29,14 @@ class Test extends Component {
           value={lang}
           onChange={this.changeLang}
           className="App-Select"
+
         />
+
         <h3 className="text-center pt-5">
-          {t("Welcome to React Translation")}
+          {t('translations.Welcome.title')}
         </h3>
       </div>
     );
   }
 }
-export default withTranslation("translations")(Test);
+export default withTranslation('common')(Test);
