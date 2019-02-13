@@ -1,0 +1,12 @@
+.tag-navbar {
+    text-decoration: none;
+    color: #003716;
+    opacity: 0.8;
+}
+
+.tag-navbar:hover, .tag-navbar:active {
+    opacity: 1;
+    font-weight: bold;
+    color: #003716;
+    text-decoration: none;
+}

@@ -11,8 +11,9 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem } from 'reactstrap';
-  
 import { Link } from 'react-router-dom'
+
+import './Header.css'
 
 export default class Header extends Component {
   
@@ -34,16 +35,16 @@ export default class Header extends Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink><Link to="/">Login</Link></NavLink>
+                    <NavLink><Link className='tag-navbar' to="/">Login</Link></NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink><Link to="/infokurs">Info Kurs</Link></NavLink>
+                    <NavLink><Link className='tag-navbar' to="/infokurs">Info Kurs</Link></NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink><Link to="/beranda">Beranda</Link></NavLink>
+                    <NavLink><Link className='tag-navbar' to="/beranda">Beranda</Link></NavLink>
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
+                    <DropdownToggle className="tag-navbar" nav caret>
                       Options
                     </DropdownToggle>
                     <DropdownMenu right>
