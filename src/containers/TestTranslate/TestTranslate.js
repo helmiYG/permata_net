@@ -21,6 +21,7 @@ class Test extends Component {
   render() {
     const { lang } = this.state;
     const { t } = this.props;
+    
     return (
       <div className="App-Root">
         <Select

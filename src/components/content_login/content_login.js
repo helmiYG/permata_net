@@ -3,6 +3,7 @@ import Button from '../button/Button'
 import { withTranslation } from 'react-i18next';
 
 class Content_Login extends Component {
+
   render() {
     const { t } = this.props;
     return (

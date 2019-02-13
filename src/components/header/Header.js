@@ -6,7 +6,6 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -26,6 +25,15 @@ class Header extends Component {
           isOpen: !this.state.isOpen
         });
       }
+
+      actionLanguage = (lang) => {
+        console.log(lang);
+        // const { i18n } = this.props;
+        // const { value } = lang;
+        // i18n.changeLanguage(value);
+        this.props.i18n.changeLanguage(lang);
+      }
+
       render() {
         const { t } = this.props;
         return (
@@ -36,33 +44,34 @@ class Header extends Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <Link to="/"><NavLink>{t('Navbar.Beranda')}</NavLink></Link>
+                    <Link to="/">{t('Navbar.Beranda')}</Link>
                   </NavItem>
                   <NavItem>
-                    <Link to="/"><NavLink>{t('Navbar.Limit_Transaksi')}</NavLink></Link>
+                    <Link to="/">{t('Navbar.Limit_Transaksi')}</Link>
                   </NavItem>
                   <NavItem>
-                    <Link to="/infokurs"><NavLink>{t('Navbar.Info_Kurs')}</NavLink></Link>
+                    <Link to="/infokurs">{t('Navbar.Info_Kurs')}</Link>
                   </NavItem>
                   <NavItem>
-                    <Link to="/infokurs"><NavLink>{t('Navbar.Hubungi_Kami')}</NavLink></Link>
+                    <Link to="/infokurs">{t('Navbar.Hubungi_Kami')}</Link>
                   </NavItem>
                   <NavItem>
-                    <Link to="/infokurs"><NavLink>{t('Navbar.Butuh_Bantuan')}</NavLink></Link>
+                    <Link to="/infokurs">{t('Navbar.Butuh_Bantuan')}</Link>
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle nav caret>
                       Bahasa
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>
-                        Indonesia
+                      <DropdownItem onClick={() => this.actionLanguage('id')}>
+                       Indonesia
                       </DropdownItem>
                       <DropdownItem divider />
-                      <DropdownItem>
+                      <DropdownItem onClick={() => this.actionLanguage('en')}>
                         English
                       </DropdownItem>
                     </DropdownMenu>
+
                   </UncontrolledDropdown>
                 </Nav>
               </Collapse>
