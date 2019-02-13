@@ -15,7 +15,7 @@ class InfoKurs extends Component {
         <div className="heading">
           <div className="container">
             <div className="row col-lg-10">
-              <Link to="/">Beranda</Link>
+              <Link to="/">Beranda</Link> 
             </div>
           </div>
         </div>
