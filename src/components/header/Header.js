@@ -14,8 +14,8 @@ import {
 import { Link } from 'react-router-dom'
 
 import './Header.css'
-
-export default class Header extends Component {
+import { withTranslation } from 'react-i18next';
+class Header extends Component {
   
     state = {
         isOpen: false
@@ -27,6 +27,7 @@ export default class Header extends Component {
         });
       }
       render() {
+        const { t } = this.props;
         return (
           <div>
             <Navbar fixed="top" color="success" light expand="md">
@@ -35,25 +36,31 @@ export default class Header extends Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink><Link className='tag-navbar' to="/">Login</Link></NavLink>
+                    <Link to="/"><NavLink>{t('Navbar.Beranda')}</NavLink></Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink><Link className='tag-navbar' to="/infokurs">Info Kurs</Link></NavLink>
+                    <Link to="/"><NavLink>{t('Navbar.Limit_Transaksi')}</NavLink></Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink><Link className='tag-navbar' to="/beranda">Beranda</Link></NavLink>
+                    <Link to="/infokurs"><NavLink>{t('Navbar.Info_Kurs')}</NavLink></Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/infokurs"><NavLink>{t('Navbar.Hubungi_Kami')}</NavLink></Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/infokurs"><NavLink>{t('Navbar.Butuh_Bantuan')}</NavLink></Link>
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle className="tag-navbar" nav caret>
-                      Options
+                    <DropdownToggle nav caret>
+                      Bahasa
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>
-                        English
+                        Indonesia
                       </DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem>
-                        Indonesia
+                        English
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
@@ -64,3 +71,5 @@ export default class Header extends Component {
         );
       }
 }
+
+export default withTranslation('common')(Header);
