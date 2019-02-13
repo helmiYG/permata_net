@@ -28,7 +28,7 @@ export default class Header extends Component {
       render() {
         return (
           <div>
-            <Navbar color="success" light expand="md">
+            <Navbar fixed="top" color="success" light expand="md">
               <NavbarBrand>PERMATA BANK</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
