@@ -9,7 +9,7 @@ class footer extends Component {
     return (
         <div>
         <div id="moreInfo">
-          <p>Untuk informasi lebih lanjut hubungi PermataTel 1500111</p>
+          <p>{t('Footer.Footer_3')}</p>
         </div>
         <div className='footer'>
             <div className='row'>

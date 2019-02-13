@@ -33,7 +33,7 @@ class Test extends Component {
         />
 
         <h3 className="text-center pt-5">
-          {t('translations.Welcome.title')}
+          {t('Home.Welcome.Title')}
         </h3>
       </div>
     );
