@@ -1,0 +1,34 @@
+{
+  "Navbar": {
+    "Beranda": "BERANDA",
+    "Limit_Transaksi": "LIMIT TRANSAKSI",
+    "Info_Kurs": "INFO KURS",
+    "Hubungi_Kami": "HUBUNGI KAMI",
+    "Butuh_Bantuan": "BUTUH BANTUAN?"
+  },
+  "Home": {
+    "Hati_Hati": "HATI-HATI, TELITI & KONFIRMASI",
+    "Jaga_Kerahasiaan": "Jaga Kerahasiaan User ID, Password, PIN/TIN, Alamat e-mail & Token Anda",
+    "Jangan_Beritahukan": "Jangan beritahukan kepada pihak lain termasuk staf Permata",
+    "Jika_Ada": "Jika ada HAL YANG TIDAK WAJAR/ BIASA. HENTIKAN transaksi dan KONFIRMASI ke PermataTel di 1500111",
+    "Pastikan": "Pastikan akses PermataNet hanya di",
+    "Klik": "Klik",
+    "Di_Sini": "di sini",
+    "Untuk_Info": "untuk info lengkap Tips Keamanan Bertransaksi.",
+    "Tentang_PermataNet": "Tentang PermataNet",
+    "Syarat_Ketentuan": "Syarat dan Ketentuan",
+    "Buka_Rekening": "Buka Rekening",
+    "Website_PermataBank": "Website PermataBank",
+    "PermataMobile": "PermataMobile dengan",
+    "Teknologi_SmartCX": "teknologi SmartCX",
+    "Download": "Download dan gunakan PermataMobile sekarang juga untuk",
+    "Cara": "#CaraPintar bertransaksi",
+    "Tentang": "Tentang PermataNet",
+    "Form_Login": "Selamat Datang di PermataNet"
+  },
+  "Footer": {
+    "Footer_1": "© 2016-2021 PermataBank. All rights reserved",
+    "Footer_2": "Limit | Transaksi  | Info Kurs | Syarat & Ketentuan | Hubungi Kami",
+    "Footer_3": "Untuk informasi lebih lanjut hubungi PermataTel 1500111"
+  }
+}

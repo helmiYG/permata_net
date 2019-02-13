@@ -6,7 +6,6 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -14,8 +13,8 @@ import {
 import { Link } from 'react-router-dom'
 
 import './Header.css'
-
-export default class Header extends Component {
+import { withTranslation } from 'react-i18next';
+class Header extends Component {
   
     state = {
         isOpen: false
@@ -26,7 +25,13 @@ export default class Header extends Component {
           isOpen: !this.state.isOpen
         });
       }
+
+      actionLanguage = (lang) => {
+        this.props.i18n.changeLanguage(lang);
+      }
+
       render() {
+        const { t } = this.props;
         return (
           <div>
             <Navbar fixed="top" color="success" light expand="md">
@@ -35,27 +40,34 @@ export default class Header extends Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink><Link className='tag-navbar' to="/">Login</Link></NavLink>
+                    <Link to="/">{t('Navbar.Beranda')}</Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink><Link className='tag-navbar' to="/infokurs">Info Kurs</Link></NavLink>
+                    <Link to="/">{t('Navbar.Limit_Transaksi')}</Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink><Link className='tag-navbar' to="/beranda">Beranda</Link></NavLink>
+                    <Link to="/infokurs">{t('Navbar.Info_Kurs')}</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/infokurs">{t('Navbar.Hubungi_Kami')}</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/infokurs">{t('Navbar.Butuh_Bantuan')}</Link>
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle className="tag-navbar" nav caret>
-                      Options
+                    <DropdownToggle nav caret>
+                      Bahasa
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>
-                        English
+                      <DropdownItem onClick={() => this.actionLanguage('id')}>
+                       Indonesia
                       </DropdownItem>
                       <DropdownItem divider />
-                      <DropdownItem>
-                        Indonesia
+                      <DropdownItem onClick={() => this.actionLanguage('en')}>
+                        English
                       </DropdownItem>
                     </DropdownMenu>
+
                   </UncontrolledDropdown>
                 </Nav>
               </Collapse>
@@ -64,3 +76,5 @@ export default class Header extends Component {
         );
       }
 }
+
+export default withTranslation('common')(Header);

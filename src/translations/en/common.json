@@ -1,0 +1,34 @@
+{
+  "Navbar": {
+    "Beranda": "HOME",
+    "Limit_Transaksi": "TRANSACTION LIMIT",
+    "Info_Kurs": "EXCHANGE RATE INFO",
+    "Hubungi_Kami": "CONTACT US",
+    "Butuh_Bantuan": "NEED HELP?"
+  },
+  "Home": {
+    "Hati_Hati": "HATI-HATI, TELITI & KONFIRMASI",
+    "Jaga_Kerahasiaan": "Keep your User ID, Password, PIN/TIN, email & token confidential",
+    "Jangan_Beritahukan": "Do not share to other parties including PermataBank staffs",
+    "Jika_Ada": "If you suspect any UNUSUAL activity occurred while using PermataNet, ABORT transaction and REPORT to PermataTel at 1500111",
+    "Pastikan": "Ensure secure access of PermataNet only at",
+    "Klik": "Click",
+    "Di_Sini": "here",
+    "Untuk_Info": "for full information on Transaction Security Tips",
+    "Tentang_PermataNet": "About PermataNet",
+    "Syarat_Ketentuan": "Terms & Conditions",
+    "Buka_Rekening": "Register New Account",
+    "Website_PermataBank": "PermataBank Website",
+    "PermataMobile": "PermataMobile supported by",
+    "Teknologi_SmartCX": "SmartCX Technology",
+    "Download": "Download PermataMobile now, enjoy transacting with",
+    "Cara": "#CaraPintar",
+    "Tentang": "Tentang PermataNet",
+    "Form_Login": "Welcome to PermataNet"
+  },
+  "Footer": {
+    "Footer_1": "© 2016-2021 PermataBank. All rights reserved",
+    "Footer_2": "Transaction Limit | Exchange Rates Info | Term & Condition | Contact Us",
+    "Footer_3": "For more information please contact PermataTel 1500111"
+  }
+}

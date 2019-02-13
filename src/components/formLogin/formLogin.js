@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
+import { withTranslation } from 'react-i18next';
 import './formLogin.css'
-export default class formLogin extends Component {
+
+class formLogin extends Component {
   render() {
+    const { t } = this.props;
     return (
       <div className="FormLogin">
-        <h4>Selamat Datang di PermataNet</h4>
+        <h4>{t('Home.Form_Login')}</h4>
         <Form>
             <FormGroup>
             <Label for="exampleEmail">Email</Label>
@@ -23,3 +25,5 @@ export default class formLogin extends Component {
     )
   }
 }
+
+export default withTranslation('common')(formLogin);
