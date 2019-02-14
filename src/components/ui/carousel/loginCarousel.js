@@ -6,16 +6,19 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import image1 from '../../../assets/images/carousel/image1.jpg'
+import image2 from '../../../assets/images/carousel/image2.jpg'
+import image3 from '../../../assets/images/carousel/image3.jpg'
 
 const items = [
   {
-    src: 'https://new.permatanet.com/permatanet/retail/exterior/promo/image?id=414&type=PB'
+    src: image1
   },
   {
-    src: 'https://new.permatanet.com/permatanet/retail/exterior/promo/image?id=418&type=PB',
+    src: image2,
   },
   {
-    src: 'https://new.permatanet.com/permatanet/retail/exterior/promo/image?id=352&type=PB',
+    src: image3,
   }
 ];
 
