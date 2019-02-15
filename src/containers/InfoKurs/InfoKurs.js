@@ -4,6 +4,8 @@ import BannerInfokurs from '../../assets/images/banner-info-kurs.jpg'
 import '../../containers/InfoKurs/InfoKurs.css';
 import { Link } from 'react-router-dom'
 
+import Footer from '../../components/footer/footer';
+
 class InfoKurs extends Component {
   render() {
     return (
@@ -93,6 +95,7 @@ class InfoKurs extends Component {
             </p>
           </div>
         </div>
+        <Footer/>
       </div>
     )
   }

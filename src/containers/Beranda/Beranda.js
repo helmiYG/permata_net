@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 import * as action from '../../store/action/index'
+import Footer from '../../components/footer/footer';
+import BannerBeranda from '../../assets/images/Banner-beranda.jpg'
 import './Beranda.css';
 
 class Beranda extends Component {
@@ -15,11 +17,13 @@ class Beranda extends Component {
     let page = this.props.location.pathname
     this.props.changeTitle(page)
     console.log(this.props.location.pathname)
+    localStorage.setItem('page', page)
   }
 
   render() {
     return (
       <div>
+        <img src={BannerBeranda}/>
        <div class="sidebar">
          <div class="toggle-btn" 
         onClick={this.toggleSidebar}
@@ -32,6 +36,7 @@ class Beranda extends Component {
           <li><Link to='#'>Beranda</Link></li>
           <li><Link to='#'>Rekening Saya</Link></li>
           <li><Link to='#'>Transfer</Link></li>
+          <li><Footer/></li>
         </ul>
        </div>
       </div>
