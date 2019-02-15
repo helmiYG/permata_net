@@ -12,7 +12,7 @@ import Beranda from './containers/Beranda/Beranda'
 import './App.css';
 
 i18next.init(i18nextConfig);
-
+  
 class App extends Component {
   componentDidMount() {
    document.getElementsByTagName('html', 'body')[0].setAttribute('style', 'margin: 0; overflow-x: hidden')
