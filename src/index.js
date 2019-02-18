@@ -5,19 +5,24 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 
 // import './index.css';
 import App from "./App";
 import headerReducer from "./store/reducer/head";
 import * as serviceWorker from "./serviceWorker";
+import infokursReducer from './store/reducer/infokurs'
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
-  head: headerReducer
+  head: headerReducer,
+  info: infokursReducer
 });
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer,composeEnhancers(
+   applyMiddleware(thunk)
+   ));
 
 const app = (
        <Provider store={store}>

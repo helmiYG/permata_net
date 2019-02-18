@@ -3,11 +3,28 @@ import Image from '../../components/images/images';
 import BannerInfokurs from '../../assets/images/banner-info-kurs.jpg'
 import '../../containers/InfoKurs/InfoKurs.css';
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import * as actionTypes from '../../store/action/index'
 
 import Footer from '../../components/footer/footer';
 
 class InfoKurs extends Component {
+  componentDidMount = () => {
+    this.props.getDataInfo();
+  }
+
   render() {
+    let rowTable = "";
+    if (this.props.infokurs === null) {
+      rowTable = "loading"
+    } else {
+      rowTable = this.props.infokurs.map((row) => {
+        return (
+          console.log("dataaaa", row)
+        )
+      })
+    }
+
     return (
       <div>
         <div className="bgText">
@@ -23,15 +40,15 @@ class InfoKurs extends Component {
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row col-lg-10 " >
-            <h4>Info Kurs</h4>
-            <table class="table table-bordered">
+        <div className="container">
+          <div className="row col-lg-10 " >
+            <h4>Info Kurs </h4>
+            <table className="table table-bordered">
               <thead>
                 <tr>
-                  <th className="bg-green" rowspan="2">Mata Uang</th>
-                  <th className="bg-blue-grey" colspan="2">Bank Note</th>
-                  <th className="bg-blue-grey" colspan="2">TT(Terhadap Rp)</th>
+                  <th className="bg-green" rowSpan="2">Mata Uang</th>
+                  <th className="bg-blue-grey" colSpan="2">Bank Note</th>
+                  <th className="bg-blue-grey" colSpan="2">TT(Terhadap Rp)</th>
                 </tr>
                 <tr>
                   <th className="bg-blue-grey">Beli</th>
@@ -42,39 +59,7 @@ class InfoKurs extends Component {
               </thead>
               <tbody>
                 <tr>
-                  <td>AUD</td>
-                  <td>9,776.50</td>
-                  <td>10,153.35</td>
-                  <td>9,776.50</td>
-                  <td>10,138.35</td>
-                </tr>
-                <tr>
-                  <td>CAD</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>10,408.20</td>
-                  <td>10,783.65</td>
-                </tr>
-                <tr>
-                  <td>CHF</td>
-                  <td>13,797.50</td>
-                  <td>14,276.15</td>
-                  <td>13,812.50</td>
-                  <td>14,261.15</td>
-                </tr>
-                <tr>
-                  <td>DKK</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>2,057.70</td>
-                  <td>2,203.00</td>
-                </tr>
-                <tr>
-                  <td>EUR</td>
-                  <td>15,598.65</td>
-                  <td>16,196.90</td>
-                  <td>15,613.65</td>
-                  <td>16,181.90</td>
+                  <td>{rowTable}</td>
                 </tr>
               </tbody>
             </table>
@@ -83,7 +68,7 @@ class InfoKurs extends Component {
 
         <div className="box">
           <div className="container">
-            <h3 className="style" >Ketentuan</h3>
+            <h3 className="style">Ketentuan</h3>
             <p>
               Data kurs yang tercantum adalah benar dan hanya merupakan
               informasi kepada nasabah, bukan sebagai EQUITY ataupun acuan yang
@@ -101,4 +86,17 @@ class InfoKurs extends Component {
   }
 }
 
-export default InfoKurs
+const mapStateToProps = state => {
+  console.log("Data -----", state.info.data);
+  return {
+    infokurs: state.info.data
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getDataInfo: () => dispatch(actionTypes.getDataTable())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(InfoKurs)
