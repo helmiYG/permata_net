@@ -29,7 +29,19 @@ export const getDataTable = () => {
             url:'https://permatanet-afc1d.firebaseio.com/Mata_Uang.json'
         })
         .then((result) => {
-            dispatch(dataTableInfokursSuccess(result.data));
+            let data = result.data;
+            let dataResult = [];
+
+            for (const key in data) {
+                if (data.hasOwnProperty(key)) {
+                    const element = data[key];
+                    dataResult.push(
+                        element
+                    )
+                }
+            }
+           // console.log("data baru", dataResult);
+            dispatch(dataTableInfokursSuccess(dataResult));
         }).catch((error) => {
             dispatch(dataTableInfokursFail(error))
         });

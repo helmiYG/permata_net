@@ -18,11 +18,18 @@ class InfoKurs extends Component {
     if (this.props.infokurs === null) {
       rowTable = "loading"
     } else {
-      rowTable = this.props.infokurs.map((row) => {
+      rowTable = this.props.infokurs.map(row => {
         return (
-          console.log("dataaaa", row)
+          <tr>
+            <td>{row.Kurs}</td>
+            <td>{row.Bank_Notes.Beli}</td>
+            <td>{row.Bank_Notes.Jual}</td>
+            <td>{row.TT.Beli}</td>
+            <td>{row.TT.Jual}</td>
+          </tr>
         )
-      })
+        //console.log( "hasil", row);
+      });
     }
 
     return (
@@ -58,9 +65,7 @@ class InfoKurs extends Component {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>{rowTable}</td>
-                </tr>
+                {rowTable}
               </tbody>
             </table>
           </div>
@@ -87,7 +92,7 @@ class InfoKurs extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("Data -----", state.info.data);
+  console.log("Data", state.info.data);
   return {
     infokurs: state.info.data
   };
