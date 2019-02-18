@@ -8,16 +8,17 @@ import Login from './containers/Login/Login'
 import InfoKurs from './containers/InfoKurs/InfoKurs'
 import Header from './components/header/Header'
 import Layout from './components/hoc/layout/layout'
-import Beranda from './containers//Beranda/Beranda'
-import Footer from './components/footer/footer'
+import Beranda from './containers/Beranda/Beranda'
 import './App.css';
 
 i18next.init(i18nextConfig);
-
+  
 class App extends Component {
   componentDidMount() {
    document.getElementsByTagName('html', 'body')[0].setAttribute('style', 'margin: 0; overflow-x: hidden')
+  console.log(this.props)
   }
+
   render() {
     return (
       <I18nextProvider i18n={i18next}>
@@ -30,11 +31,10 @@ class App extends Component {
               <Route path="/beranda" component={Beranda} />
             </Switch>
           </div>
-          <Footer />
         </Layout>
       </I18nextProvider>
     );
   }
 }
 
-export default App;
+export default App

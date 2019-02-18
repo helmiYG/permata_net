@@ -1,7 +1,8 @@
 import * as actionTypes from '../action/actionTypes'
 
 const initState = {
-    title: 'PERMATA LOGIN'
+    title: '',
+    page:''
 }
 
 const headReducer = (state = initState, action) => {
@@ -9,12 +10,20 @@ const headReducer = (state = initState, action) => {
         case actionTypes.CHANGE_TITLE_INFOKURS: 
             return {
                 ...state,
-                title: 'BERANDA PERMATA'
+                title: 'INFOKURS PERMATA',
+                page: 'Infokurs'
             }
         case actionTypes.CHANGE_TITLE_BERANDA:
             return {
                 ...state,
-                title: 'INFOKURS PERMATA'
+                title: 'BERANDA PERMATA',
+                page: 'Beranda'
+            }
+        case actionTypes.CHANGE_TITLE_LOGIN:
+            return{
+                ...state,
+                title: 'LOGIN PERMATA',
+                page: 'Login'
             }
         default:
             return state

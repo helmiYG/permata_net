@@ -2,7 +2,13 @@ import * as actionTypes from './actionTypes'
 
 export const changeTitleInfoKurs = () => {
     return{
-        type: actionTypes.CHANGE_TITLE_LOGIN
+        type: actionTypes.CHANGE_TITLE_INFOKURS
+    }
+}
+
+export const changeTitleBeranda = () => {
+    return{
+        type: actionTypes.CHANGE_TITLE_BERANDA
     }
 }
 
@@ -17,6 +23,9 @@ export const changeTitle = (page) => {
         switch (page) {
             case '/infokurs':
                 dispatch(changeTitleInfoKurs())
+                break;
+            case '/beranda':
+                dispatch(changeTitleBeranda())
                 break;
             default:
                 dispatch(changeTitleLogin())
