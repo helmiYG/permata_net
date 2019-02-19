@@ -10,7 +10,7 @@ class formLogin extends Component {
     newPassword: ''
   }
 
-  // Event when value change Email
+  // Event when value change
   inputEmail = (event) => {
     let newEmail = event.target.value.toString()
     console.log(newEmail,'Email');
@@ -18,18 +18,13 @@ class formLogin extends Component {
       newEmail: newEmail
     })
   }
-  // Event when value change Password
+
   inputPassword = (event) => {
     let newPassword = event.target.value.toString()
     console.log(newPassword,'Pass');
     this.setState({
       newPassword: newPassword
     })
-  }
-
-  // Event when clicked the button
-  eventClicked = (event) => {
-    console.log('Di click');
   }
 
   render() {
@@ -41,24 +36,22 @@ class formLogin extends Component {
             <FormGroup>
             <Label for="exampleEmail">Email</Label>
             <Input 
-                type="email" 
-                name="email" 
-                id="exampleEmail" 
-                placeholder="enter email" 
-                onChange={(event) => this.inputEmail(event)}/>
+              type="email" 
+              name="email" 
+              id="exampleEmail" 
+              placeholder="enter email" 
+              onChange={(event) => this.inputEmail(event)}/>
             </FormGroup>
             <FormGroup>
             <Label for="examplePassword">Password</Label>
             <Input 
-                type="password" 
-                name="password" 
-                id="examplePassword" 
-                placeholder="enter password"
-                onChange={(event) => this.inputPassword(event)} />
+              type="password" 
+              name="password" 
+              id="examplePassword" 
+              placeholder="enter password"
+              onChange={(event) => this.inputPassword(event)} />
             </FormGroup>
-            <Button 
-                color="success" block
-                onClick={(event) => this.eventClicked(event)}>Submit</Button>
+            <Button color="success" block>Submit</Button>
       </Form>
 
       </div>
