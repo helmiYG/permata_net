@@ -6,6 +6,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+
 import image1 from '../../../assets/images/carousel/image1.jpg'
 import image2 from '../../../assets/images/carousel/image2.jpg'
 import image3 from '../../../assets/images/carousel/image3.jpg'
@@ -31,6 +32,10 @@ class loginCarousel extends Component {
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
+  }
+
+  componentDidMount(){
+    console.log('masuk carousel');
   }
 
   onExiting() {

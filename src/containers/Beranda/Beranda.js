@@ -23,7 +23,7 @@ class Beranda extends Component {
   render() {
     return (
       <div>
-        <img src={BannerBeranda}/>
+        <img src={BannerBeranda} alt='gambar'/>
        <div class="sidebar">
          <div class="toggle-btn" 
         onClick={this.toggleSidebar}
