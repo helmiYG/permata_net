@@ -44,7 +44,7 @@ class Header extends Component {
                     <NavLink><Link className="tag-navbar" to="/">{t('Navbar.Beranda')}</Link></NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink><Link className="tag-navbar" to="#">{t('Navbar.Limit_Transaksi')}</Link></NavLink>
+                    <NavLink><Link className="tag-navbar" to="limittransaksi">{t('Navbar.Limit_Transaksi')}</Link></NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink><Link className="tag-navbar" to="/infokurs">{t('Navbar.Info_Kurs')}</Link></NavLink>
