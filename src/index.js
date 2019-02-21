@@ -13,11 +13,13 @@ import App from "./App";
 import headerReducer from "./store/reducer/head";
 import * as serviceWorker from "./serviceWorker";
 import infokursReducer from './store/reducer/infokurs'
+import limitReducer from './store/reducer/limit'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
   head: headerReducer,
-  info: infokursReducer
+  info: infokursReducer,
+  limit: limitReducer
 });
 
 const store = createStore(rootReducer,composeEnhancers(

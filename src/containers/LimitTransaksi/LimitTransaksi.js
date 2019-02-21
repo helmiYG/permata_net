@@ -8,9 +8,9 @@ import * as actionTypes from "../../store/action/index";
 
 import Footer from "../../components/footer/footer";
 
-class InfoKurs extends Component {
+class Limit extends Component {
   componentDidMount = () => {
-    this.props.getDataInfo();
+    this.props.getLimit();
   };
 
   render() {
@@ -124,19 +124,18 @@ class InfoKurs extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("Data", state.info.data);
   return {
-    infokurs: state.info.data
+    limit: state.limit.data
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    getDataInfo: () => dispatch(actionTypes.getDataTable())
+    getLimit: () => dispatch(actionTypes.getDataLimit())
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(InfoKurs);
+)(Limit);
