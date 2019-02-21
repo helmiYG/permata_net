@@ -9,3 +9,7 @@ export {
 export {
     getDataTable
 } from './infokurs'
+
+export {
+    getDataLimit
+} from './limit'
