@@ -14,23 +14,24 @@ class Limit extends Component {
   };
 
   render() {
-    // let rowTable = "";
-    // if (this.props.infokurs === null) {
-    //   rowTable = "loading";
-    // } else {
-    //   rowTable = this.props.infokurs.map(row => {
-    //     return (
-    //       <tr>
-    //         <td>{row.Kurs}</td>
-    //         <td>{row.Bank_Notes.Beli}</td>
-    //         <td>{row.Bank_Notes.Jual}</td>
-    //         <td>{row.TT.Beli}</td>
-    //         <td>{row.TT.Jual}</td>
-    //       </tr>
-    //     );
-    //     //console.log( "hasil", row);
-    //   });
-    // }
+    let rowTable = "";
+    if (this.props.limit === null) {
+      rowTable = "loading";
+    } else {
+      rowTable = this.props.limit.map(row => {
+        return (
+          <tr>
+            <td>test</td>
+            <td>{row.Priority}</td>
+            <td>{row.Preferred}</td>
+            <td>{row.Personal}</td>
+            <td>{row.Bintang}</td>
+            <td>{row.Me}</td>
+          </tr>
+        );
+        //console.log( "hasil", row);
+      });
+    }
 
     return (
       <div>
@@ -92,6 +93,7 @@ class Limit extends Component {
                   <td>Tidak Terbatas</td>
                   <td>Tidak Terbatas</td>
                 </tr>
+                {rowTable}
               </tbody>
             </table>
           </div>
@@ -124,6 +126,8 @@ class Limit extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state.limit.data);
+  
   return {
     limit: state.limit.data
   };
