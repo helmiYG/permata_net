@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {Redirect} from 'react-router-dom';
 
 import './Login.css'
 import Carousel from '../../components/ui/carousel/loginCarousel'
@@ -17,11 +18,15 @@ class Login extends Component {
   }
   
   render() {
+    if(this.props.idToken){
+      return <Redirect to='/beranda' />
+    }
+
     return (
       <div className="login">
         <Carousel />
         <FormLogin />
-        <ContentLogin />
+        <ContentLogin  />
         <Footer/>
       </div>
     )
@@ -34,5 +39,12 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(Login)
+const mapStateToProps = state => {
+  return{
+    idToken: state.auth.idToken,
+    loading: state.auth.loading
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
 
