@@ -68,7 +68,6 @@ class Header extends Component {
                         English
                       </DropdownItem>
                     </DropdownMenu>
-
                   </UncontrolledDropdown>
                 </Nav>
               </Collapse>

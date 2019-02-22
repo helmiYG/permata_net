@@ -1,0 +1,17 @@
+.imageCarousel {
+    width: 100%;
+    height: 500px;
+}
+.form-loginEl {
+    right: 0;
+    margin-right: 60px;
+}
+@media screen and (max-width:500px) {
+    /* .imageCarousel {
+        max-width: 100%;
+        height: auto;
+    } */
+    .form-loginEl {
+        margin: auto auto;
+    }
+}

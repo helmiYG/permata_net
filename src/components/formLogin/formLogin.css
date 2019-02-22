@@ -3,10 +3,25 @@
     height: 400px;
     width: 300px;
     background: whitesmoke;
-    margin-top: -435px;
-    margin-left: 70%;
+    right: 0;
+    margin-right: 60px;
     position: absolute;
+    /* margin-top: 40px; */
+    margin-top: -440px;
+    z-index: 1;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
+
+@media screen and (max-width: 540px) {      
+    .FormLogin {
+        /* margin-top: 600px; */
+        margin-top: 100px;
+        display: block;
+        padding: auto auto;
+    }
+ }
+
+
+
