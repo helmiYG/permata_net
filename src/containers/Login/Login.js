@@ -31,7 +31,7 @@ class Login extends Component {
       </div>
     )
   }
-}
+} 
 
 const mapDispatchToProps = dispatch => {
     return {
