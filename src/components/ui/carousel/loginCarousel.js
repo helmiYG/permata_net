@@ -10,6 +10,8 @@ import {
 import image1 from '../../../assets/images/carousel/image1.jpg'
 import image2 from '../../../assets/images/carousel/image2.jpg'
 import image3 from '../../../assets/images/carousel/image3.jpg'
+import './loginCarousel.css'
+// import Formlogin from '../../formLogin/formLogin';
 
 const items = [
   {
@@ -73,22 +75,27 @@ class loginCarousel extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} />
+          <img className='imageCarousel' src={item.src} alt={item.altText} />
           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
         </CarouselItem>
       );
     });
 
     return (
-      <Carousel
-        activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
-      >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-      </Carousel>
+      <div>
+        {/* <div className="form-loginEl">
+          <Formlogin />
+        </div> */}
+        <Carousel
+          activeIndex={activeIndex}
+          next={this.next}
+          previous={this.previous}
+        >
+          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+          {slides}
+          <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+        </Carousel>
+      </div>
     );
   }
 }
