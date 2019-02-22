@@ -13,16 +13,18 @@ import App from "./App";
 import headerReducer from "./store/reducer/head";
 import authReducer from "./store/reducer/auth";
 import * as serviceWorker from "./serviceWorker";
+import infokursReducer from './store/reducer/infokurs'
 
-const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
-
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
   head: headerReducer,
+  info: infokursReducer,
   auth: authReducer
 });
 
-const store = createStore(rootReducer, composeEnhancers(
-   applyMiddleware(thunk)));
+const store = createStore(rootReducer,composeEnhancers(
+   applyMiddleware(thunk)
+   ));
 
 const app = (
        <Provider store={store}>

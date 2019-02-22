@@ -9,6 +9,7 @@ import InfoKurs from './containers/InfoKurs/InfoKurs'
 import Header from './components/header/Header'
 import Layout from './components/hoc/layout/layout'
 import Beranda from './containers/Beranda/Beranda'
+import LimitTransaksi from './containers/LimitTransaksi/LimitTransaksi'
 import './App.css';
 
 i18next.init(i18nextConfig);
@@ -27,6 +28,7 @@ class App extends Component {
           <div className="set-bellow-navbar">
             <Switch>
               <Route path="/" exact component={Login} />
+              <Route path="/limittransaksi" component={LimitTransaksi} />
               <Route path="/infokurs" component={InfoKurs} />
               <Route path="/beranda" component={Beranda} />
             </Switch>
