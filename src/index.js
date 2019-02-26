@@ -14,12 +14,17 @@ import headerReducer from "./store/reducer/head";
 import authReducer from "./store/reducer/auth";
 import * as serviceWorker from "./serviceWorker";
 import infokursReducer from './store/reducer/infokurs'
+import limitReducer from './store/reducer/limit'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
   head: headerReducer,
   info: infokursReducer,
+<<<<<<< HEAD
   auth: authReducer
+=======
+  limit: limitReducer
+>>>>>>> back end limit 1
 });
 
 const store = createStore(rootReducer,composeEnhancers(
