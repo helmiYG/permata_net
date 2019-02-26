@@ -20,11 +20,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
   head: headerReducer,
   info: infokursReducer,
-<<<<<<< HEAD
-  auth: authReducer
-=======
+  auth: authReducer,
   limit: limitReducer
->>>>>>> back end limit 1
 });
 
 const store = createStore(rootReducer,composeEnhancers(
