@@ -17,7 +17,6 @@ class formLogin extends Component {
   // Event when value change
   inputEmail = (event) => {
     let newEmail = event.target.value.toString()
-    console.log(newEmail,'Email');
     this.setState({
       newEmail: newEmail
     })
@@ -25,14 +24,12 @@ class formLogin extends Component {
 
   inputPassword = (event) => {
     let newPassword = event.target.value.toString()
-    console.log(newPassword,'Pass');
     this.setState({
       newPassword: newPassword
     })
   }
 
   handlerClicked = (event) => {
-    console.log("Di click");
     event.preventDefault();
     this.props.login(
       this.state.newEmail,
@@ -42,13 +39,10 @@ class formLogin extends Component {
   render() {
     const { t } = this.props;
 
-console.log(this.props.idToken,'Token');
-console.log(this.props.loading,'Loading');
 let loadingSpinner = ''; 
 if(this.props.loading){
   loadingSpinner= <Spinner/>
 }
-  console.log(loadingSpinner,'Spinner');
 
     let errorMessage = '';
     if(this.props.err){

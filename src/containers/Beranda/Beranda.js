@@ -13,10 +13,16 @@ class Beranda extends Component {
   // }
   
   componentDidMount(){
+       // pastikan ketika user mengunjungi page beranda sudah login dengan cara cek token dilocalstorage
+       if (!localStorage.getItem('token')) {
+        //kalo belum lagin balikin ke page login 
+        this.props.history.push('/')
+      }
     let page = this.props.location.pathname
     this.props.changeTitle(page)
     localStorage.setItem('page', page)
   }
+
 
   render() {
     return (

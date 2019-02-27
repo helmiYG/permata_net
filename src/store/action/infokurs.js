@@ -40,7 +40,6 @@ export const getDataTable = () => {
                     )
                 }
             }
-           // console.log("data baru", dataResult);
             dispatch(dataTableInfokursSuccess(dataResult));
         }).catch((error) => {
             dispatch(dataTableInfokursFail(error))

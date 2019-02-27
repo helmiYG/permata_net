@@ -24,7 +24,6 @@ export const authFail = (err) => {
 }
 
 export const auth = (email,password) => {
-    console.log(email,password,"Masuk redux auth");
     return dispatch => {
         dispatch(authStart());
         axios({
@@ -37,11 +36,10 @@ export const auth = (email,password) => {
             }
         })
         .then((result) => {
-            console.log(result.data.idToken,"Ini di then");
+            localStorage.setItem('token',result.data.idToken)
             dispatch(authSuccess(result.data.idToken))
         }).catch((err) => {
             dispatch(authFail(err.response.data.error.message))
-            console.log(err.response.data.error.message,'ini di cath error');
         });
     }
 }
