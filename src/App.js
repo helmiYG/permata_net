@@ -17,7 +17,6 @@ i18next.init(i18nextConfig);
 class App extends Component {
   componentDidMount() {
    document.getElementsByTagName('html', 'body')[0].setAttribute('style', 'margin: 0; overflow-x: hidden')
-  console.log(this.props)
   }
 
   render() {

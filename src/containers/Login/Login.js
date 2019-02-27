@@ -18,7 +18,7 @@ class Login extends Component {
   }
   
   render() {
-    if(this.props.idToken){
+    if( localStorage.getItem('token') ){
       return <Redirect to='/beranda' />
     }
 
