@@ -30,5 +30,19 @@
     "Footer_1": "© 2016-2021 PermataBank. All rights reserved",
     "Footer_2": "Limit | Transaksi  | Info Kurs | Syarat & Ketentuan | Hubungi Kami",
     "Footer_3": "Untuk informasi lebih lanjut hubungi PermataTel 1500111"
+  },
+  "Infokurs":{
+    "Info_Valuta": "Informasi Kurs Valuta Asing",
+    "Beranda": "Beranda",
+    "Info_Kurs": "Info Kurs",
+    "Mata_Uang": "Mata Uang",
+    "Bank_Notes": "Bank Notes (Terhadap RP)",
+    "Beli_Bank": "Beli",
+    "Jual_Bank": "Jual",
+    "TT": "TT (Terhadap RP)",
+    "Beli_TT": "Beli",
+    "Jual_TT": "Jual",
+    "Ketentuan": "Ketentuan",
+    "Isi_Ketentuan": "Data kurs yang tercantum adalah benar dan hanya merupakan informasi kepada nasabah, bukan sebagai EQUITY ataupun acuan yang digunakan untuk melakukan transaksi. Data yang digunakan untuk melakukan transaksi adalah kurs yang berlaku saat transaksi dilakukan. Bank Permata dapat sewaktu-waktu melakukan perubahan terhadap data yang ada berdasarkan data kurs yang berlaku. Bank Permata tidak bertanggung jawab atas segala risiko yang ditimbulkan akibat dikeluarkannya informasi ini."
   }
 }

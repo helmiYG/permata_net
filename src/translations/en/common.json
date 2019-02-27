@@ -30,5 +30,19 @@
     "Footer_1": "© 2016-2021 PermataBank. All rights reserved",
     "Footer_2": "Transaction Limit | Exchange Rates Info | Term & Condition | Contact Us",
     "Footer_3": "For more information please contact PermataTel 1500111"
+  },
+  "Infokurs":{
+    "Info_Valuta": "Foreign Exchange Rates Information",
+    "Beranda": "Home",
+    "Info_Kurs": "Exchange Rates Information",
+    "Mata_Uang": "Currency",
+    "Bank_Notes": "Bank Notes (to IDR)",
+    "Beli_Bank": "Buy",
+    "Jual_Bank": "Sell",
+    "TT": "TT (to IDR)",
+    "Beli_TT": "Buy",
+    "Jual_TT": "Sell",
+    "Ketentuan": "Conditions",
+    "Isi_Ketentuan": "Data exchange listed is correct and act as information only to customers and not as EQUITY or references used to make transactions. Data used to conduct transactions is the rate prevailing when the transaction is done. PermataBank may make changes at any time to the data that is based on data exchange prevailing. Bank Permata is not responsible for any risks arising from the release of this information."
   }
 }

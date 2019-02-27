@@ -8,6 +8,7 @@ class Content_Login extends Component {
 
   render() {
     const { t } = this.props;
+    
     return (
       <div className="content-login">
         <div className="warning">
