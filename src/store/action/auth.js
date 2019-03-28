@@ -28,11 +28,16 @@ export const auth = (email,password) => {
         dispatch(authStart());
         axios({
             method: 'post',
-            url: 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDD4BfiDeShez3L-hf9NIKl5B7mOD0ihcY',
+            url: 'http://10.87.248.76:9084/services/PNETREVAMP/userLogin',
+            // https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDD4BfiDeShez3L-hf9NIKl5B7mOD0ihcY'
             data:{
-                email: email,
-                password: password,
-                returnSecureToken: true
+                'email': email,
+                'password': password,
+                // returnSecureToken: true
+            },
+            headers:{
+                'Content-Type' : 'application/json',
+                'Ist-Api-Version': '1_0_1'
             }
         })
         .then((result) => {
