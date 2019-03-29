@@ -31,6 +31,11 @@
                     <webXml>${basedir}/web.xml</webXml>
                 </configuration>
             </plugin>
+            <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
