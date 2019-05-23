@@ -16,7 +16,6 @@ i18next.init(i18nextConfig);
   
 class App extends Component {
   componentDidMount() {
-    // matiin scroll 
    document.getElementsByTagName('html', 'body')[0].setAttribute('style', 'margin: 0; overflow-x: hidden')
   }
 
